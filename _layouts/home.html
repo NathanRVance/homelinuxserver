@@ -8,7 +8,8 @@ layout: default
 
   <h1 class="page-heading">Pages</h1>
   <ul class="doc-list">
-    {% for doc in site.docs %}
+    {% assign docs = site.docs | sort: "sortable" %}
+    {% for doc in docs %}
       <li>
         <h2>
 		<a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>

@@ -23,8 +23,8 @@ url: "https://vance.homelinuxserver.org" # the base hostname & protocol for your
 github_username:  NathanRVance
 
 collections:
-        docs:
-                output: true
+  docs:
+    output: true
 
 defaults:
   - scope:

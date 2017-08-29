@@ -1,6 +1,7 @@
 ---
-title:  "Email with Postfix"
+title: "Email with Postfix"
 desc: "Securely send and receive email with Postfix"
+sortable: 3
 ---
 
 Before we start, make sure that your internet service provider isn't blocking tcp port 25 (smtp). I found that AT&T will unblock it for free; I just had to call and ask. Once that is done, we can proceed.
