@@ -8,8 +8,9 @@ Before we start, make sure that your internet service provider isn't blocking tc
 1. If you haven't done so already, [install ssl certificates](ssl-with-letsencrypt.html). We will use the same certs for both https and for encrypting email.
 2. Allow smtp through the firewall. If you use firewalld,
 	```
-	# firewall-cmd --permanent --zone=public --add-service=smtp
-	# firewall-cmd --permanent --zone=public --add-port=587/tcp
+	# firewall-cmd --permanent --add-service=smtp
+	# firewall-cmd --permanent --add-port=587/tcp
+	# firewall-cmd --permanent --add-service=imap
 	# firewall-cmd --reload
 	```
 3. Install postfix.
@@ -29,13 +30,30 @@ Before we start, make sure that your internet service provider isn't blocking tc
 	smtpd_tls_security_level = may
 	smtp_tls_security_level = may
 	inet_protocols = ipv4
+	alias_maps = hash:/etc/aliases
+	alias_database = hash:/etc/aliases
+	smtpd_sasl_type = dovecot
+	smtpd_sasl_path = private/auth
+	smtpd_sasl_auth_enable = yes
+	local_recipient_maps = proxy:unix:passwd.byname $alias_maps
+	```
+5. Set up aliases in `/etc/aliases`. This isn't strictly required if you only want to receive mail for explicit system users, but may be helpful if you want, well, aliases. Mine looks like this:
+	```
+	postmaster:     root
+	root:           nathan
+	```
+	This configuration makes mail addressed to postmaster go to root, and root's mail goes to me. So that this change takes effect, execute:
+	```
+	$ sudo newaliases
 	```
 5. Uncomment (or modify) the following lines in `/etc/postfix/master.cf`:
 	```
-	submission inet n       -       n       -       -       smtpd
+	submission inet n       -       -       -       -       smtpd
 	 -o syslog_name=postfix/submission
 	 -o smtpd_tls_security_level=encrypt
 	 -o smtpd_sasl_auth_enable=yes
+	 -o mtpd_sasl_type=dovecot
+	 -o smtpd_sasl_path=private/auth
 	 -o smtpd_reject_unlisted_recipient=no 
 	 -o smtpd_recipient_restrictions=permit_sasl_authenticated,reject
 	 -o milter_macro_daemon_name=ORIGINATING
@@ -94,7 +112,7 @@ The solution: Use [DKIM](http://www.dkim.org/) to authenticate email. Ah, yes, y
 	# mv mail.private /etc/dkimkeys/dkim.key
 	# chown opendkim:opendkim /etc/dkimkeys/dkim.key
 	```
-6. The file mail.txt (generated with mail.private) contains the public key information. Mine looks like this:
+6. The file mail.txt (generated along with mail.private in the previous step) contains the public key information. Mine looks like this:
 	```
 	mail._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; t=y; "
 		"p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9VI66HU8kitypUPGrZbajuWM1tqCDhLuPafk5JMItKIspdBhTO8YxXj2we01Yba21H0JCjROroy23I0r2XT2tmkfsY4q3KhsZlV/UUEH1RohLjmEOYqtRJATUtEdJxG0Pp3KW96L4fTHaabzXsDcdVyJE++I/OvU9NL+UUw4izbYzadBOrU0IDqDoD86Kv5OO3WMK1VNQ97qss"
@@ -114,3 +132,49 @@ The solution: Use [DKIM](http://www.dkim.org/) to authenticate email. Ah, yes, y
 Now when you send an email, gmail can verify that it was you who sent it.
 
 ![works](/assets/with-dkms.png)
+
+You can stop there if you prefer to do everything on the command line over ssh. However, if you wish to use an email client, you must set up imap with [Dovecot](https://dovecot.org/).
+1. Install Dovecot.
+	```
+	$ sudo apt install dovecot-core dovecot-imapd
+	```
+2. Wipe out `/etc/dovecot/dovecot.conf` and replace it with:
+	```
+	disable_plaintext_auth = no
+	mail_privileged_group = mail
+	mail_location = mbox:~/mail:INBOX=/var/mail/%u
+	userdb {
+	  driver = passwd
+	}
+	passdb {
+	  args = %s
+	  driver = pam
+	}
+	protocols = " imap"
+	protocol imap {
+	  mail_plugins = " autocreate"
+	}
+	plugin {
+	  autocreate = Trash
+	  autocreate2 = Sent
+	  autosubscribe = Trash
+	  autosubscribe2 = Sent
+	}
+	service auth {
+	  unix_listener /var/spool/postfix/private/auth {
+	    group = postfix
+	    mode = 0660
+	    user = postfix
+	  }
+	}
+	ssl=required
+	ssl_cert = </etc/letsencrypt/live/subdomain.domain.com/cert.pem
+	ssl_key = </etc/letsencrypt/live/subdomain.domain.com/privkey.pem
+	```
+
+3. Restart postfix and dovecot.
+	```
+	$ sudo systemctl restart postfix
+	$ sudo systemctl restart dovecot
+	```
+4. Connect to your server using imap. The connection is authenticated with an unencrypted password, but it's tunneled using STARTTLS.
