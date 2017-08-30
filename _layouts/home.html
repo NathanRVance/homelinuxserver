@@ -6,9 +6,22 @@ layout: default
 
   {{ content }}
 
-  <h1 class="page-heading">Pages</h1>
+  <h1 class="page-heading"><b>Server Software</b></h1>
   <ul class="doc-list">
-    {% assign docs = site.docs | sort: "sortable" %}
+    {% assign docs = site.serverdocs | sort: "sortable" %}
+    {% for doc in docs %}
+      <li>
+        <h2>
+		<a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
+        </h2>
+	<span class="doc-desc">{{ doc.desc }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <h1 class="page-heading"><b>Client Software</b></h1>
+  <ul class="doc-list">
+    {% assign docs = site.clientdocs | sort: "sortable" %}
     {% for doc in docs %}
       <li>
         <h2>

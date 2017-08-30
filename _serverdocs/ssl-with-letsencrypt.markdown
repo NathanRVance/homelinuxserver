@@ -1,6 +1,6 @@
 ---
 title: "SSL with Let's Encrypt"
-desc: "Use SSL keys to encrypt web pages in https connection, and to encrypt email."
+desc: "Use SSL keys to encrypt web pages in https connection, and to encrypt email"
 sortable: 1
 ---
 
