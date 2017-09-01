@@ -9,3 +9,5 @@ This server, vance.homelinuxserver.org, was configured entirely using free and o
 To date, the software on vance.homelinuxserver.org is as follows:
  * OS: Debian 9 (Stretch)
  * Webserver: nginx 1.10.3
+ * Email: postfix 3.1.4
+ * Cloud: Nextcloud 12.0.2
