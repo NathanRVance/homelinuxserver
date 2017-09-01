@@ -19,18 +19,18 @@ sortable: 2
 	Inside the http block, add a server block:
 	```
 	server {
-	        listen                  80;
-	        listen                  [::]:80;
-	        listen                  443 default_server ssl;
-	        server_name             subdomain.domain.com www.subdomain.domain.com;
-	        if ($http_host = www.subdomain.domain.com) {
-	                return 303 https://subdomain.domain.com$request_uri;
-	        }
-	        if ($scheme = http) {
-	                return 301 https://subdomain.domain.com$request_uri;
-	        }
-	        ssl_certificate         /etc/letsencrypt/live/subdomain.domain.com/fullchain.pem;
-	        ssl_certificate_key     /etc/letsencrypt/live/subdomain.domain.com/privkey.pem;
+		listen                  80;
+		listen                  [::]:80;
+		listen                  443 default_server ssl;
+		server_name             subdomain.domain.com www.subdomain.domain.com;
+		if ($http_host = www.subdomain.domain.com) {
+			return 303 https://subdomain.domain.com$request_uri;
+		}
+		if ($scheme = http) {
+			return 301 https://subdomain.domain.com$request_uri;
+		}
+		ssl_certificate         /etc/letsencrypt/live/subdomain.domain.com/fullchain.pem;
+		ssl_certificate_key     /etc/letsencrypt/live/subdomain.domain.com/privkey.pem;
 		ssl_dhparam             /etc/nginx/dhparams.pem;
 		ssl_protocols           TLSv1 TLSv1.1 TLSv1.2;
 		# The following is the current (Sept 2017) recommendation from ssllabs.com.
