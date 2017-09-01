@@ -22,3 +22,7 @@ On Arch, additionaly start the daemon.
 ```
 $ gnome-keyring-daemon
 ```
+Make this persist across reboots by starting it automatically via cron:
+```
+@reboot /usr/bin/gnome-keyring-daemon
+```
