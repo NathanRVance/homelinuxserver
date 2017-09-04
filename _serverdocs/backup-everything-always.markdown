@@ -90,5 +90,5 @@ Let's get to work implementing this.
 3. Make both scripts executable, and then test them out. You should see that your backup directory fills with data, and that it all ends up on the remote machine.
 4. Add the backup process to your root's crontab.
 	```
-	0 2 * * 2 /root/backup.sh
+	0 2 * * * /root/backup.sh
 	```
