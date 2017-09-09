@@ -18,11 +18,7 @@ on Debian, then chances are you don't have a daemon running that implements org.
 ```
 $ sudo apt install gnome-keyring
 ```
-On Arch, additionaly start the daemon.
+Depending on your setup, you may need to start the daemon:
 ```
 $ gnome-keyring-daemon
-```
-Make this persist across reboots by starting it automatically via cron:
-```
-@reboot /usr/bin/gnome-keyring-daemon
 ```
