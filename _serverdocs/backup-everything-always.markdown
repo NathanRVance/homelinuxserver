@@ -9,7 +9,7 @@ So far, we've generated a fair number of configuration files, some email, and a 
 Luckily, routine tasks like backups are something computers are very good at. We'll set up automatic backups that operate like this:
  * On your server, all files to be backed up are rsynced to a backup folder on the server every night.
  * Next, the backup folder is rsynced to a remote machine (if available).
- * Finally, the remote machine makes a tar.gz archive of the data, places it in long term storage, and rotates stale backups out.
+ * Finally, the remote machine (or the server if you don't have one) makes a tar.gz archive of the data, places it in long term storage, and rotates stale backups out.
 
 Let's get to work implementing this.
 1. Make a shell script called `/root/backup.sh` that rsyncs all of your data to a backup location. Here's an example that backs up all of the files we have modified so far in constructing our Home Linux Server:
@@ -62,9 +62,13 @@ Let's get to work implementing this.
 
    # Function rotates backups into and out of correct folders
    function rotate {
+   	# Directory to move backups from
    	fromDir=$1
+   	# Index to move move out of fromDir
    	moveFrom=$2
+   	# Directory to move backups to
    	toDir=$3
+   	# Minimum gap between ages of backups in toDir. Used to determine whether to move the backup or delete it.
    	ageGapTo=$4
    	# Deal with the oldest backups in fromDir
    	while :; do

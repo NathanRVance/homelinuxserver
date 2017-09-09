@@ -17,6 +17,11 @@
             {% if site.email %}
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
+            {% if site.issues %}
+	    <li>
+		    Please report any issues with this site <a href="{{ site.issues }}">here</a>.
+	    </li>
+	    {% endif %}
         </ul>
       </div>
 
