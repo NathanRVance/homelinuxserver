@@ -1,6 +1,6 @@
 ---
 title: "Back Up Everything. Always."
-desc: "No data is safe, ever. But, backing it all up can make it a bit less precarious."
+desc: "No data is safe, ever. But, backing it all up can make it a bit less precarious"
 sortable: 5
 ---
 

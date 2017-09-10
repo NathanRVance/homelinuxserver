@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 ---
 
+# This Site
 This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirely using free and open source technology. It is part of a larger system of free and open source technologies that makes it possible for me, the primary user of this server, to cut ties with large tech companies like Google. The goal of this site is to document the process of setting up this server so that others can do the same.
 
 Of course, this server isn't sufficient to cut all my ties to Google. The scope of this server covers the following:
@@ -11,13 +12,13 @@ Of course, this server isn't sufficient to cut all my ties to Google. The scope 
  * [Nextcloud](/serverdocs/file-sharing-with-nextcloud.html) to replace Google Drive (or Backup and Sync, whatever).
    * Pair it with [LibreOffice](https://www.libreoffice.org/) to replace Google Docs, Sheets, and Slides.
    * Install a plugin to replace Google Calendar.
-   * Another plugin replaces the Gmail web client.
-   * And another for video calls.
+   * Another plugin replaces the gmail web client.
+   * And another does video calls.
 
-There are many more services that can't be hosted by a home linux server (at least not as easily). I can still recommend a couple open source alternatives:
+There are many more services that can't be hosted by a home linux server (at least not as easily). I can still recommend a few open source and/or freedom loving alternatives:
  * [LBRY](/clientdocs/videos-with-lbry.html) to replace YouTube.
- * [DuckDuckGo](https://duckduckgo.com/) to replace Google Search.
- * [Mastodon](https://mastodon.social/about) to replace social media (Google Plus to stay on theme).
+ * [DuckDuckGo](https://duckduckgo.com/), while not open source, at least prioritizes privacy. It's a reasonable replacement for Google Search.
+ * [Mastodon](https://mastodon.social/about) to replace social media (Google Plus, if you want to stay on theme).
 
 Shamefully, there are several things that I have no good recommendations for:
  * Google Voice. Maybe [Matrix](https://matrix.org/) someday? If it bridged SMS, then yes. But it doesn't (yet), so no.
@@ -25,4 +26,36 @@ Shamefully, there are several things that I have no good recommendations for:
    * If all you need is a handheld, there are [many linux handhelds](https://www.reddit.com/r/linux/comments/4biamr/a_list_of_handheldpocket_linux_computers/) out there.
  * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. There isn't much out here, at least not much decent.
 
-If there are errors on this site, or I overlooked something and used an inferior technology, please submit an issue at this site's [github page](https://github.com/NathanRVance/homelinuxserver/issues).
+# My Philosophy
+Throughout this site, I stress the importance of decentralization in communication services. The reason for this is:
+
+>Power tends to corrupt, and absolute power corrupts absolutely.
+
+-Lord Acton
+
+This has historically been seen in both politics and economics, but can be seen in software as well.
+
+|---
+| Field | Definition | Implication |
+|:-:|-|-
+| Centralized Politics (Dictatorship) | A single person wields the power to legislate | Everyone must live by the authoritarian rule, no matter how corrupt |
+| Decentralized Politics (Democracy) | Whether a direct democracy like the [ancient greeks](http://www.ancient.eu/Athenian_Democracy/), or indirect like a modern republic, the people as a whole wield the power to legislate | Decisions made tend not to be corrupt |
+| Centralized Economics (Communism) | A single entity (in theory, the commune, in practice, a dictator) controls all of the means of production | No individual has the freedom to produce |
+| Decentralized Economics (Capitalism) | No single entity controls all of the means of production | Anyone with access to some means of production has the freedom to produce |
+| Centralized Software (Proprietary) | A single company locks users into an ecosystem | It's difficult for the user to switch proprietary services if and when those services become oppresive or obsolete |
+| Decentralized Software (Open Source) | End users have full control over their own software ecosystems | It's easy to build a customized service stack and swap out parts as needs arise |
+{:.mbtablestyle}
+<br>
+Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people are involved. I believe that forcing people to speak or act a certain way (authoritarian dictatorships), do or not do certain productive activities (communism), or use certain software (proprietary software stacks) will tend toward a corrupt, ineffective, and frustrating society.
+
+On the other hand, when the power to legislate is shifted from the government to the people (democracy), and the power to produce is held by individuals rather than big businesses (free market capitalism), and the power to design a software ecosystem is held by the end users (open source software), then society will tend toward being just, efficient, and enjoyable.
+
+This clash of ideas can best be seen though two opposing worldviews: Society is either a machine that must be engineered, or it is an ecosystem that must be conserved.
+
+Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design the system, a mechanic (commune) must maintain it, and only trusted entities (proprietors) can be allowed to interact with it.
+
+In contrast, every ecosystem will tend toward efficiency and stability, but only if it is left alone. The ecosystem will design itself (democracy), provide for itself (capitalism), and form its own interactions (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
+
+It would be great if these worldviews were complimentary. Unfortunately, they're mutually exclusive. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things will happen.
+
+For what it's worth, I for one am convinced that society is an ecosystem. This worldview was influenced by what I've read, experienced, observed, and reasoned out. Whether or not you agree with my philosophy, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
