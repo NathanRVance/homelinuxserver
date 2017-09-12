@@ -11,9 +11,10 @@ Of course, this server isn't sufficient to cut all my ties to Google. The scope 
  * [Postfix](/serverdocs/email-with-postfix.html) to replace Gmail.
  * [Nextcloud](/serverdocs/file-sharing-with-nextcloud.html) to replace Google Drive (or Backup and Sync, whatever).
    * Pair it with [LibreOffice](https://www.libreoffice.org/) to replace Google Docs, Sheets, and Slides.
-   * Install a plugin to replace Google Calendar.
-   * Another plugin replaces the gmail web client.
-   * And another does video calls.
+   * Install [a plugin](https://apps.nextcloud.com/apps/calendar) to replace Google Calendar.
+   * [Another plugin](https://apps.nextcloud.com/apps/mail) replaces the gmail web client.
+   * And [another](https://apps.nextcloud.com/apps/spreed) does video calls.
+   * You can even [stream music](https://apps.nextcloud.com/apps/music), thus replacing Spotify and Pandora.
 
 There are many more services that can't be hosted by a home linux server (at least not as easily). I can still recommend a few open source and/or freedom loving alternatives:
  * [LBRY](/clientdocs/videos-with-lbry.html) to replace YouTube.
@@ -46,7 +47,7 @@ This has historically been seen in both politics and economics, but can be seen 
 | Decentralized Software (Open Source) | End users have full control over their own software ecosystems | It's easy to build a customized service stack and swap out parts as needs arise |
 {:.mbtablestyle}
 <br>
-Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people are involved. I believe that forcing people to speak or act a certain way (authoritarian dictatorships), do or not do certain productive activities (communism), or use certain software (proprietary software stacks) will tend toward a corrupt, ineffective, and frustrating society.
+Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people are involved (God is a notable exception). I believe that forcing people to speak or act a certain way (authoritarian dictatorships), do or not do certain productive activities (communism), or use certain software (proprietary software stacks) will tend toward a corrupt, ineffective, and frustrating society.
 
 On the other hand, when the power to legislate is shifted from the government to the people (democracy), and the power to produce is held by individuals rather than big businesses (free market capitalism), and the power to design a software ecosystem is held by the end users (open source software), then society will tend toward being just, efficient, and enjoyable.
 

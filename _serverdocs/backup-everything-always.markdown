@@ -76,7 +76,7 @@ Let's get to work implementing this.
    		if [ -z "$thisFile" ]; then break; fi
    		thisFile=$fromDir/$thisFile
    		toYoungest=$toDir/$(ls -t $toDir/ | head -n 1)
-   		if (( $(age $toYoungest) - $(age $thisFile) > $ageGapTo )); then
+   		if [ "$toYoungest" == "$toDir/" ] ||  (( $(age $toYoungest) - $(age $thisFile) > $ageGapTo )); then
    			mv $thisFile $toDir
    		else
    			rm -f $thisFile
