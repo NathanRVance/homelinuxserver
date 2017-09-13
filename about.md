@@ -27,7 +27,7 @@ Shamefully, there are several things that I have no good recommendations for:
    * If all you need is a handheld, there are [many linux handhelds](https://www.reddit.com/r/linux/comments/4biamr/a_list_of_handheldpocket_linux_computers/) out there.
  * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. There isn't much out here, at least not much decent.
 
-# My Philosophy
+# My Philosophy Concerning Open Source
 Throughout this site, I stress the importance of decentralization in communication services. The reason for this is:
 
 >Power tends to corrupt, and absolute power corrupts absolutely.
@@ -39,24 +39,27 @@ This has historically been seen in both politics and economics, but can be seen 
 |---
 | Field | Definition | Implication |
 |:-:|-|-
-| Centralized Politics (Dictatorship) | A single person wields the power to legislate | Everyone must live by the authoritarian rule, no matter how corrupt |
-| Decentralized Politics (Democracy) | Whether a direct democracy like the [ancient greeks](http://www.ancient.eu/Athenian_Democracy/), or indirect like a modern republic, the people as a whole wield the power to legislate | Decisions made tend not to be corrupt |
-| Centralized Economics (Communism) | A single entity (in theory, the commune, in practice, a dictator) controls all of the means of production | No individual has the freedom to produce |
-| Decentralized Economics (Capitalism) | No single entity controls all of the means of production | Anyone with access to some means of production has the freedom to produce |
-| Centralized Software (Proprietary) | A single company locks users into an ecosystem | It's difficult for the user to switch proprietary services if and when those services become oppresive or obsolete |
-| Decentralized Software (Open Source) | End users have full control over their own software ecosystems | It's easy to build a customized service stack and swap out parts as needs arise |
+| Centralized Politics (Dictatorship) | Absolute power to legislate is consolidated in one leader | The single source of authoritarian rule will be corrupted |
+| Decentralized Politics (Democracy) | Legislative power is distributed among many people | It's more difficult to corrupt (buy out) the masses |
+| Centralized Economics <br> (Communism or Statism) | Power to produce is consolidated in the commune (communism) or a big business (statism) | A single source for goods and services tends to overcharge for bad products |
+| Decentralized Economics (Capitalism) | Production is distributed among many individuals and businesses | The freedom to choose suppliers keeps prices down and quality up |
+| Centralized Software (Proprietary) | Control over software is consolidated in the company that wrote the software | Proprietary software companies tend to sell user data to increase profits |
+| Decentralized Software <br> (Open Source) | Control of software is distributed among the users of the software | Because projects can be forked, only data that end users want shared ends up getting shared\* |
 {:.mbtablestyle}
-<br>
-Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people are involved (God is a notable exception). I believe that forcing people to speak or act a certain way (authoritarian dictatorships), do or not do certain productive activities (communism), or use certain software (proprietary software stacks) will tend toward a corrupt, ineffective, and frustrating society.
+\* If someone steals it, it's on the sysadmin who hosted the open source software.
 
-On the other hand, when the power to legislate is shifted from the government to the people (democracy), and the power to produce is held by individuals rather than big businesses (free market capitalism), and the power to design a software ecosystem is held by the end users (open source software), then society will tend toward being just, efficient, and enjoyable.
+Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people (as opposed to God) are involved. I believe that forcing people to speak or act a certain way (authoritarian dictatorships), use certain goods and services (communism, statism), or give control of software to a company (proprietary software) will tend toward a corrupt, ineffective, and insecure society.
+
+On the other hand, when the power to legislate is shifted to the people (democracy), and the power to produce is held by individuals (free market capitalism), and the power to modify software is held by users (open source software), then society will tend toward being just, efficient, and secure.
 
 This clash of ideas can best be seen though two opposing worldviews: Society is either a machine that must be engineered, or it is an ecosystem that must be conserved.
 
-Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design the system, a mechanic (commune) must maintain it, and only trusted entities (proprietors) can be allowed to interact with it.
+Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design the system, a mechanic (commune) must maintain it, and the owner (proprietor) must use it.
 
-In contrast, every ecosystem will tend toward efficiency and stability, but only if it is left alone. The ecosystem will design itself (democracy), provide for itself (capitalism), and form its own interactions (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
+In contrast, every ecosystem will tend toward efficiency and stability if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and make decisions for itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
 
-It would be great if these worldviews were complimentary. Unfortunately, they're mutually exclusive. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things will happen.
+It would be great if these worldviews were complimentary. That way, we could all have our political differences, shrug it off as a matter of opinion, and carry on. Unfortunately, they're mutually exclusive, and in quite a disasterous way. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things happen.
 
-For what it's worth, I for one am convinced that society is an ecosystem. This worldview was influenced by what I've read, experienced, observed, and reasoned out. Whether or not you agree with my philosophy, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
+For what it's worth, I for one am convinced that society is an ecosystem. This worldview was influenced by what I've read, experienced, observed, and reasoned out. If you disagree, feel free to shoot me an email (the address is in the footer). I'd love to chat.
+
+Whether or not you agree with my philosophy, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
