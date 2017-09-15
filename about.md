@@ -5,27 +5,27 @@ permalink: /about/
 ---
 
 # This Site
-This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirely using free and open source technology. It is part of a larger system of free and open source technologies that makes it possible for me, the primary user of this server, to cut ties with large tech companies like Google. The goal of this site is to document the process of setting up this server so that others can do the same.
+This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirely using free and open source software. It is part of a larger system of free and open source technologies that makes it possible for me, the primary user of this server, to cut ties with large tech companies like Google. The goal of this site is to document the process of setting up this server so that others can do the same.
 
-Unfortunately, this server isn't enough to make me 100% self sufficient. The scope of this server covers the following:
+The scope of this server covers the following:
  * [Postfix](/serverdocs/email-with-postfix.html) to replace Gmail.
  * [Nextcloud](/serverdocs/file-sharing-with-nextcloud.html) to replace Google Drive (or Backup and Sync, whatever).
    * Pair it with [LibreOffice](https://www.libreoffice.org/) to replace Google Docs, Sheets, and Slides.
    * Install [a plugin](https://apps.nextcloud.com/apps/calendar) to replace Google Calendar.
-   * [Another plugin](https://apps.nextcloud.com/apps/mail) replaces the gmail web client.
+   * [Another plugin](https://apps.nextcloud.com/apps/mail) replaces the Gmail web client.
    * And [another](https://apps.nextcloud.com/apps/spreed) does video calls.
    * You can even [stream music](https://apps.nextcloud.com/apps/music), thus replacing Spotify and Pandora.
 
-There are many more services that can't be hosted by a home linux server (at least not as easily). I can still recommend a few open source and/or freedom loving alternatives:
+There are many more services that are more difficult to host at home. I can still recommend a few open source and/or freedom loving alternatives:
  * [LBRY](/clientdocs/videos-with-lbry.html) to replace YouTube.
- * [DuckDuckGo](https://duckduckgo.com/), while not open source, at least prioritizes privacy. It's a reasonable replacement for Google Search.
+ * [DuckDuckGo](https://duckduckgo.com/), while not open source, at least prioritizes privacy. It's a good replacement for Google Search.
  * [Mastodon](https://mastodon.social/about) to replace social media.
 
 Shamefully, there are several things that I have no good recommendations for:
  * Google Voice. Maybe [Matrix](https://matrix.org/) someday? If it bridged SMS, then yes. But it doesn't (yet), so no.
  * Android phones, and the Google Play ecosystem that goes with them. Right now, nothing. But [Librem 5](https://puri.sm/shop/librem-5/) looks like it will be awesome when it ships in 2019!
    * If all you need is a handheld, there are [many linux handhelds](https://www.reddit.com/r/linux/comments/4biamr/a_list_of_handheldpocket_linux_computers/) out there.
- * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. There isn't much out here, at least not much decent.
+ * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. There isn't much out here, at least not much that's decent.
 
 # My Philosophy Concerning Open Source
 Throughout this site, I stress the importance of decentralization in communication services. The reason for this is:
@@ -35,12 +35,12 @@ Throughout this site, I stress the importance of decentralization in communicati
 -Lord Acton
 
 This situation has historically been seen in both politics and economics, but can be seen in software as well. The basic question of where power should rest can be summarized as follows:
- * Who gets to create legislation, a leader or the people who live under it?
- * Who gets to design the economy, the state or the people who work and do commerse in it?
- * Who gets to design software, a company or the people who use it?
+ * Who gets to create legislation? A leader? Or the people who live under the law?
+ * Who gets to design the economy? The state? Or the people who work and do commerce in the economy?
+ * Who gets to design software? A company? Or the people who use the software?
  * In general, who should have power? A trusted entitiy? Or the people who are vulnerable to that power?
 
-This question has been answered different ways throughout history. Here are a few contrasting examples:
+This question has been answered in different ways throughout history. Here are a few contrasting examples:
 
 |---
 | Field | Definition | Implication |
