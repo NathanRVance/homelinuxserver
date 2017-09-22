@@ -33,16 +33,20 @@ Let's get to work implementing this.
    # Back up cron.
    crontab -l > $backup/cron.bak
    
+   # Destination directory to sync $backup to (uncompressed)
    remote_backup="/path/to/backups"
+   # Destination directory to store compressed backups. For example, a RAID unit or an external hard drive.
    remote_longterm_store="path/to/longterm"
+   # Location of script on remote host to rotate backups. This is created in step 2.
+   remote_rotate="/path/to/rotate.sh"
    remote_user="username"
    remote_host="hostname"
-   # Copy the backup to a remote location. The --delete flag removes extraneous destination files.
+   # Sync the backup to a remote location. The --delete flag removes destination files that don't exist locally.
    rsync -Aaxz --delete $backup $remote_user@$remote_host:$remote_backup
-   # Create a tar.gz of the backup. Replace /path/to/rotate.sh with the location you use in the next step.
-   ssh $remote_user@$remote_host "cd $remote_longterm_store && tar czf $(hostname -f)-$(date +"%Y%m%d").tar.gz $remote_backup && ./rotate.sh"
+   # Create a tar.gz of the backup and rotate backups.
+   ssh $remote_user@$remote_host "cd $remote_longterm_store && tar czf $(hostname -f)-$(date +"%Y%m%d").tar.gz $remote_backup && $remote_rotate"
    ```
-2. On the remote server, make the shell script `/path/to/longterm/rotate.sh`. This script is responsible for organizing your backups. The following example retains daily backups for a week, one backup from each week for a month, and one backup from each month for a year.
+2. On the remote server, make the shell script `rotate.sh`. This script is responsible for organizing your backups. The following example retains daily backups for a week, one backup from each week for a month, and one backup from each month for a year. This is just an example; if your data is small enough and storage is plentiful, it may be wise to retain backups indefinitely.
    ```
    #!/bin/bash
 
