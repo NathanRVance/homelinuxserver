@@ -90,7 +90,7 @@ The solution: Use [DKIM](http://www.dkim.org/) to authenticate email. Ah, yes, y
    ```
    Disclaimer: This doesn't actually do anything in Debian 9. You'll also have to modify the service file, `/lib/systemd/system/opendkim.service`, which passes the socket in as an argument:
    ```
-   ExecStart=/usr/sbin/opendkim -P /var/run/opendkim/opendkim.pid -p inet:12345@localhost
+   ExecStart=/usr/sbin/opendkim -x /etc/opendkim.conf -p inet:12345@localhost
    ```
    As always when modifying a .service file, reload the daemons with `systemctl daemon-reload`.
 4. Edit `/etc/postfix/main.cf` to account for DKIM.
