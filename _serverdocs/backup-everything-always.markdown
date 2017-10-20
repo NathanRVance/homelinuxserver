@@ -42,7 +42,7 @@ Let's get to work implementing this.
    remote_user="username"
    remote_host="hostname"
    # Sync the backup to a remote location. The --delete flag removes destination files that don't exist locally.
-   rsync -Aaxz --delete $backup $remote_user@$remote_host:$remote_backup
+   rsync -Aaxzz --delete $backup $remote_user@$remote_host:$remote_backup
    # Create a tar.gz of the backup and rotate backups.
    ssh $remote_user@$remote_host "cd $remote_longterm_store && tar czf $(hostname -f)-$(date +"%Y%m%d").tar.gz $remote_backup && $remote_rotate"
    ```

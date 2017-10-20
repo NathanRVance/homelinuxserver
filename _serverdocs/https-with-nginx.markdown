@@ -1,6 +1,6 @@
 ---
 title: "HTTPS with Nginx"
-desc: "Grab a free domain name from freedns"
+desc: "Host your own website"
 sortable: 2
 ---
 
