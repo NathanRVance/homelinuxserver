@@ -6,7 +6,7 @@ Far too many of us rely heavily on closed source technologies for services such 
 
 The thing with tech companies is, until they lose you as a user, they'll use you like a loser.
 
-Ah, but what other options are there? Ditching Google only to end up with Yahoo is hardly an upgrade. It seems like the only way to get some level of privacy is to pay a subscription, which sucks. Of course, the other option is to host your own services, but server administration is a pain. Reserving a domain name, obtaining SSL keys, and setting up software are all non-trivial tasks, often require a static IP address, and can be quite expensive. But things don't have to be this way. The server that this site is running on resides in a living room, and was configured at zero monetary cost!
+But what other options are there? Ditching Google only to end up with Yahoo is hardly an upgrade. It seems like the only way to get some level of privacy is to pay a subscription, which sucks. Of course, the other option is to host your own services, but server administration is a pain. Reserving a domain name, obtaining SSL keys, and setting up software are all non-trivial tasks, often require a static IP address, and can be quite expensive. But things don't have to be this way. The server that this site is running on resides in a living room, and was configured for zero monetary cost!
 
 Anyone with a Linux desktop and an internet connection (even a residential one with an ever changing IP) can reduce or eliminate reliance on closed source services. Some of these services can be replaced outright by a home Linux server. Others require client side software to access a distributed network.
 

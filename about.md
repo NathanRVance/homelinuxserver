@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 # This Site
-This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirely using free and open source software. It is part of a larger system of free and open source technologies that makes it possible for me, the primary user of this server, to cut ties with large tech companies like Google. The goal of this site is to document the process of setting up this server so that others can do the same.
+This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirely using free and open source software. It is part of a larger set of free and open source technologies that makes it possible for me, the primary user of this server, to cut ties with large tech companies like Google. The goal of this site is to document the process of setting up this server so that others can do the same.
 
 The scope of this server covers the following:
  * [Postfix](/serverdocs/email-with-postfix.html) to replace Gmail.
@@ -16,7 +16,7 @@ The scope of this server covers the following:
    * And [another](https://apps.nextcloud.com/apps/spreed) does video calls.
    * You can even [stream music](https://apps.nextcloud.com/apps/music), thus replacing Spotify and Pandora.
 
-There are many more services that are more difficult to host at home. I can still recommend a few open source and/or freedom loving alternatives:
+There are many more services that are extremely difficult to host at home. I can recommend a few open source and/or freedom loving alternatives:
  * [LBRY](/clientdocs/videos-with-lbry.html) to replace YouTube.
  * [DuckDuckGo](https://duckduckgo.com/), while not open source, at least prioritizes privacy. It's a good replacement for Google Search.
  * [Mastodon](https://mastodon.social/about) to replace social media.
@@ -25,7 +25,7 @@ Shamefully, there are several things that I have no good recommendations for:
  * Google Voice. Maybe [Matrix](https://matrix.org/) someday? If it bridged SMS, then yes. But it doesn't (yet), so no.
  * Android phones, and the Google Play ecosystem that goes with them. Right now, nothing. But [Librem 5](https://puri.sm/shop/librem-5/) looks like it will be awesome when it ships in 2019!
    * If all you need is a handheld, there are [many linux handhelds](https://www.reddit.com/r/linux/comments/4biamr/a_list_of_handheldpocket_linux_computers/) out there.
- * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. There isn't much out here, at least not much that's decent.
+ * Google Maps. For reference, the privacy loving DuckDuckGo defaults to Bing Maps. The only thing that comes close is [OpenStreetMap](https://www.openstreetmap.org), although it's quite point-of-interest sparse.
 
 # My Philosophy Concerning Open Source
 Throughout this site, I stress the importance of decentralization in communication services. The reason for this is:
@@ -34,13 +34,13 @@ Throughout this site, I stress the importance of decentralization in communicati
 
 -Lord Acton
 
-This situation has historically been seen in both politics and economics, but can be seen in software as well. The basic question of where power should rest can be summarized as follows:
+This situation has historically been seen in both politics and economics, but can be seen in software as well. The basic question is where power should rest:
  * Who gets to create legislation? A leader? Or the people who live under the law?
  * Who gets to design the economy? The state? Or the people who work and do commerce in the economy?
  * Who gets to design software? A company? Or the people who use the software?
  * In general, who should have power? A trusted entitiy? Or the people who are vulnerable to that power?
 
-This question has been answered in different ways throughout history. Here are a few contrasting examples:
+This question has been answered many different ways. Here are a few contrasting examples, where the implications are provided by a combination of Lord Acton's philosophy and history:
 
 |---
 | Field | Definition | Implication |
@@ -49,12 +49,13 @@ This question has been answered in different ways throughout history. Here are a
 | Decentralized Politics (Democracy) | Legislative power is distributed among many people | It's more difficult to corrupt (buy out) the masses |
 | Centralized Economics <br> (Communism or Statism) | Power to produce is consolidated in the commune (communism) or a big business (statism) | A single source for goods and services tends to overcharge for bad products |
 | Decentralized Economics (Capitalism) | Production is distributed among many individuals and businesses | The freedom to choose suppliers keeps prices down and quality up |
-| Centralized Software (Proprietary) | Control of software is consolidated in the company that wrote it | Proprietary software companies tend to sell user data to increase profits |
-| Decentralized Software <br> (Open Source) | Control of software is distributed among the people that use it | Because projects can be forked, only data that end users want shared ends up getting shared\* |
+| Centralized Software (Proprietary) | Control of software is consolidated in the company that wrote it | Proprietary software companies see their software as a means to an end (profit), tending toward poorly maintained software once it is done making money |
+| Decentralized Software <br> (Open Source) | Control of software is distributed among the people that use it | Because projects can be forked, support for software continues as long as the software remains useful |
 {:.mbtablestyle}
-\* If someone steals it, it's on the sysadmin who hosted the open source software.
 
-Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people (as opposed to God) are involved. I believe authoritarian legislation (dictatorships), planned economies (communism, statism), and centrally controlled software (proprietary software) will tend toward a corrupt, ineffective, and insecure society.
+In practice, the extremes presented in this table rarely if ever exist. Even in software, short of a company going under, it's quite rare to find a profit driven company that refuses to patch software without first releasing a new version. While this may be a terribly ugly form of maintenance, it nevertheless is. On the flip side, there are numerous open source projects that feature Benevolent Dictators for Life. While these people are certaintly cornertones of the FOSS community, an individual leading a project can be blind to new directions
+
+Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people (as opposed to God) are involved. In fact, I'd go as far to say that any time someone tries to centralize power, they are claiming godship. I believe authoritarian legislation (dictatorships), planned economies (communism, statism), and centrally controlled software (proprietary software) will tend toward a corrupt, ineffective, and insecure society.
 
 On the other hand, when the power to legislate is shifted to the people (democracy), and the power to produce is held by individuals (free market capitalism), and the power to modify software is held by users (open source software), then society will tend toward being just, efficient, and secure.
 
@@ -62,7 +63,7 @@ This clash of ideas can best be seen though two opposing worldviews: Society is 
 
 Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design the system, a mechanic (commune) must maintain it, and the owner (proprietor) must use it.
 
-In contrast, every ecosystem will tend toward efficiency and stability if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and make decisions for itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
+In contrast, every ecosystem will tend toward efficiency and stability if and only if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and make decisions for itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
 
 It would be great if these worldviews were complimentary. That way, we could all have our political differences, shrug it off as a matter of opinion, and carry on. Unfortunately, they're mutually exclusive, and in quite a disasterous way. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things happen.
 
