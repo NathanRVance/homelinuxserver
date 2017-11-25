@@ -34,13 +34,13 @@ Throughout this site, I stress the importance of decentralization in communicati
 
 -Lord Acton
 
-This situation has historically been seen in both politics and economics, but can be seen in software as well. The basic question is where power should rest:
+This situation has historically been seen in both politics and economics, but is present in software as well. In essence, it's a matter of where power should rest:
  * Who gets to create legislation? A leader? Or the people who live under the law?
  * Who gets to design the economy? The state? Or the people who work and do commerce in the economy?
- * Who gets to design software? A company? Or the people who use the software?
- * In general, who should have power? A trusted entitiy? Or the people who are vulnerable to that power?
+ * Who gets to control software? A company? Or the people who use the software?
+ * In general, who should wield power? A trusted entitiy? Or the people who are vulnerable to that power?
 
-This question has been answered many different ways. Here are a few contrasting examples, where the implications are provided by a combination of Lord Acton's philosophy and history:
+These questions have been answered many different ways. Here are a few contrasting examples (implications are my observations):
 
 |---
 | Field | Definition | Implication |
@@ -49,24 +49,22 @@ This question has been answered many different ways. Here are a few contrasting 
 | Decentralized Politics (Democracy) | Legislative power is distributed among many people | It's more difficult to corrupt (buy out) the masses |
 | Centralized Economics <br> (Communism or Statism) | Power to produce is consolidated in the commune (communism) or a big business (statism) | A single source for goods and services tends to overcharge for bad products |
 | Decentralized Economics (Capitalism) | Production is distributed among many individuals and businesses | The freedom to choose suppliers keeps prices down and quality up |
-| Centralized Software (Proprietary) | Control of software is consolidated in the company that wrote it | Proprietary software companies see their software as a means to an end (profit), tending toward poorly maintained software once it is done making money |
-| Decentralized Software <br> (Open Source) | Control of software is distributed among the people that use it | Because projects can be forked, support for software continues as long as the software remains useful |
+| Centralized Software (Proprietary) | Control of software is consolidated in the company that wrote it | The end user is not allowed to know everything that their software is doing or make unapproved modifications to it |
+| Decentralized Software <br> (Open Source) | Control of software is distributed among the people that use it | Because source code is available, every function is visible and any modification that can be coded is possible |
 {:.mbtablestyle}
 
-In practice, the extremes presented in this table rarely if ever exist. Even in software, short of a company going under, it's quite rare to find a profit driven company that refuses to patch software without first releasing a new version. While this may be a terribly ugly form of maintenance, it nevertheless is. On the flip side, there are numerous open source projects that feature Benevolent Dictators for Life. While these people are certaintly cornertones of the FOSS community, an individual leading a project can be blind to new directions
+In practice, the extremes presented in this table rarely if ever exist. However, many situations lean one way or the other, toward either centralization or decentralization. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people (as opposed to God) are involved. I believe authoritarian legislation (dictatorships), planned economies (communism, statism), and centrally controlled software (proprietary software) will tend toward a corrupt, ineffective, and restricted society.
 
-Different people lean towards either centralized or decentralized systems. Being a [classic liberal](https://www.sciencedaily.com/terms/classical_liberalism.htm), I believe that centralizing power is always dangerous when people (as opposed to God) are involved. In fact, I'd go as far to say that any time someone tries to centralize power, they are claiming godship. I believe authoritarian legislation (dictatorships), planned economies (communism, statism), and centrally controlled software (proprietary software) will tend toward a corrupt, ineffective, and insecure society.
+On the other hand, when the power to legislate is shifted to the people (democracy), and the power to produce is held by individuals (free market capitalism), and the power to modify software is held by users (open source software), then society will tend toward being just, efficient, and free.
 
-On the other hand, when the power to legislate is shifted to the people (democracy), and the power to produce is held by individuals (free market capitalism), and the power to modify software is held by users (open source software), then society will tend toward being just, efficient, and secure.
+This clash of ideas can best be seen through two opposing worldviews: Society is either a machine that must be engineered, or it is an ecosystem that must be conserved.
 
-This clash of ideas can best be seen though two opposing worldviews: Society is either a machine that must be engineered, or it is an ecosystem that must be conserved.
+Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design it, a mechanic (commune) must maintain it, and the owner (proprietor) must use it.
 
-Every machine requires a centralized system so that it can function efficiently and remain stable. An engineer (dictator) must design the system, a mechanic (commune) must maintain it, and the owner (proprietor) must use it.
-
-In contrast, every ecosystem will tend toward efficiency and stability if and only if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and make decisions for itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
+In contrast, every ecosystem will tend toward efficiency and stability if and only if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and engineer itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
 
 It would be great if these worldviews were complimentary. That way, we could all have our political differences, shrug it off as a matter of opinion, and carry on. Unfortunately, they're mutually exclusive, and in quite a disasterous way. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things happen.
 
-For what it's worth, I for one am convinced that society is an ecosystem. This worldview was influenced by what I've read, experienced, observed, and reasoned out. If you disagree, feel free to shoot me an email (the address is in the footer). I'd love to chat.
+For what it's worth, I'm convinced that society is an ecosystem. Part of what makes countries like the USA great is decentralized politics and economics. In stark contrast, countries like Noth Korea are humanitarian nightmares because of their authoritarian rules and command economies. Similarly, Linux is great because it is open source and community driven. Windows and OS X suck because they are locked down and locked into their respective companies' visions.
 
-Whether or not you agree with my philosophy, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
+If you disagree with any of this, feel free to shoot me an email (the address is in the footer). I'd love to chat. Whether or not you agree with my philosophy, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
