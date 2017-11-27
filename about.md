@@ -17,7 +17,8 @@ The scope of this server covers the following:
    * You can even [stream music](https://apps.nextcloud.com/apps/music), thus replacing Spotify and Pandora.
 
 There are many more services that are extremely difficult to host at home. I can recommend a few open source and/or freedom loving alternatives:
- * [LBRY](/clientdocs/videos-with-lbry.html) to replace YouTube.
+ * [BitChute](https://www.bitchute.com/) to replace YouTube.
+ * [LBRY](/clientdocs/videos-with-lbry.html) is another approach to YouTube replacement.
  * [DuckDuckGo](https://duckduckgo.com/), while not open source, at least prioritizes privacy. It's a good replacement for Google Search.
  * [Mastodon](https://mastodon.social/about) to replace social media.
 
