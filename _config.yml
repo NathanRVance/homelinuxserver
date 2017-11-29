@@ -40,6 +40,11 @@ defaults:
       type: clientdocs
     values:
       layout: page
+  - scope:
+      path: ""
+      type: nottech
+    values:
+      layout: page
 
 # Build settings
 markdown: kramdown
