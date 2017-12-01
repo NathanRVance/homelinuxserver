@@ -160,7 +160,7 @@ sortable: 4
    ```
 6. In your web browser, go to `https://subdomain.domain.com/nextcloud`. When configuring the database, use the username, password, and database name that you configured in step 2.
 7. In the upper right corner, click the gear icon, and in the dropdown click `+ Apps`. Under the `Organization` tab you can find Calendar and oh so much more! Install Calendar and whatever else you want.
-8. Navigate in your web browser to whatever calendar app you used to use (for me it's [Google Calendar](https://calendar.google.com/)) and export it. In Google Calendar, you have to go under Settings -> Calendars -> Export calendars.
+8. Navigate in your web browser to whatever calendar app you used to use (for me it was Google Calendar) and export it. In Google Calendar, you have to go under Settings -> Calendars -> Export calendars.
 9. Back in Nextcloud, import your calendar.
 10. If you want to mount your cloud directory with webdav, connect to:
     ```
