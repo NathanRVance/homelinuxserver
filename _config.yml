@@ -24,42 +24,36 @@ url: "https://vance.homelinuxserver.org" # the base hostname & protocol for your
 github_username:  NathanRVance
 
 collections:
-  serverdocs:
+  subpages:
     output: true
-  clientdocs:
+  server:
     output: true
-  nottech:
+  coolstuff:
+    output: true
+  ramblings:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: serverdocs
+      type: subpages
+    values:
+      layout: home
+  - scope:
+      path: ""
+      type: server
     values:
       layout: page
   - scope:
       path: ""
-      type: clientdocs
+      type: coolstuff
     values:
       layout: page
   - scope:
       path: ""
-      type: nottech
+      type: ramblings
     values:
       layout: page
 
 # Build settings
 markdown: kramdown
-#theme: minima
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/

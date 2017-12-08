@@ -6,41 +6,19 @@ layout: default
 
   {{ content }}
 
-  <h1 class="page-heading"><b>Server Software</b></h1>
+  {% assign name = page.col %}
+  {% for c in site.collections %}
+    {% if c.label == name %}
+      {% assign docs = c.docs | sort: "sortable" %}
+    {% endif %}
+  {% endfor %}
   <ul class="doc-list">
-    {% assign docs = site.serverdocs | sort: "sortable" %}
     {% for doc in docs %}
       <li>
         <h2>
-		<a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
+          <a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
         </h2>
-	<span class="doc-desc">{{ doc.desc }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-  
-  <h1 class="page-heading"><b>Client Software</b></h1>
-  <ul class="doc-list">
-    {% assign docs = site.clientdocs | sort: "sortable" %}
-    {% for doc in docs %}
-      <li>
-        <h2>
-		<a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
-        </h2>
-	<span class="doc-desc">{{ doc.desc }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading"><b>Loosely Tech Related Ramblings</b></h1>
-  <ul class="doc-list">
-    {% assign docs = site.nottech | sort: "sortable" %}
-    {% for doc in docs %}
-      <li>
-        <h2>
-		<a class="doc-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
-        </h2>
-	<span class="doc-desc">{{ doc.desc }}</span>
+          <span class="doc-desc">{{ doc.desc }}</span>
       </li>
     {% endfor %}
   </ul>
