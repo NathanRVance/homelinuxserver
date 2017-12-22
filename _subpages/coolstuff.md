@@ -6,4 +6,4 @@ col: coolstuff
 sortable: 2
 ---
 
-This is placeholder text! I still have to expand this category... more stuff will come here...
+This is a list of some awesome projects that I've stumbled across and made me think, "you know, that's pretty cool. I wish it got more attention." They may not be production ready, and perhaps they don't solve any problems that entirely exist, but nevertheless they're cool.
