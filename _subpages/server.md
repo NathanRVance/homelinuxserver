@@ -6,7 +6,7 @@ col: server
 sortable: 1
 ---
 
-Far too many of us rely heavily on closed source technologies for services such as email, calendars, file storage, and more. Doing so gives control over communication, personal life, and personal data to the small number of entities that run those services. This kind of consolidation of power is fundimentally anti-democratic, not to mention dangerous.
+Far too many of us rely heavily on closed source technologies for services such as email, calendars, file storage, and more. Doing so gives control over communication, personal life, and personal data to the small number of entities that run those services. This kind of consolidation of power is fundamentally anti-democratic, not to mention dangerous.
 
 The thing with tech companies is, until they lose you as a user, they'll use you like a loser.
 

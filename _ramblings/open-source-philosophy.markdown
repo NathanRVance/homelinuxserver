@@ -14,9 +14,9 @@ This situation has historically been seen in both politics and economics, but is
  * Who gets to create legislation? A leader? Or the people who live under the law?
  * Who gets to design the economy? The state? Or the people who work and do commerce in the economy?
  * Who gets to control software? A company? Or the people who use the software?
- * In general, who should wield power? A trusted entitiy? Or the people who are vulnerable to that power?
+ * In general, who should wield power? A trusted entity? Or the people who are vulnerable to that power?
 
-These questions have been answered many different ways. Here are a few contrasting examples (implications are my observations):
+These questions have been answered many different ways. Here are a few contrasting examples (implications are my admittedly biased observations):
 
 |---
 | Field | Definition | Implication |
@@ -39,8 +39,8 @@ Every machine requires a centralized system so that it can function efficiently 
 
 In contrast, every ecosystem will tend toward efficiency and stability if and only if it is allowed to do so. The ecosystem will design itself (democracy), provide for itself (capitalism), and engineer itself (open source) without the heavy hand of an outside power messing with it, thankyouverymuch.
 
-It would be great if these worldviews were complimentary. That way, we could all have our political differences, shrug it off as a matter of opinion, and carry on. Unfortunately, they're mutually exclusive, and in quite a disasterous way. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things happen.
+It would be great if these worldviews were complimentary. That way, we could all have our political differences, shrug it off as a matter of opinion, and carry on. Unfortunately, they're mutually exclusive, and in quite a disastrous way. Leave a machine be and it will fall apart. Try to engineer an ecosystem and you'll destroy it. If society is one of these two things, and it is mistreated as the other, then very bad things happen.
 
-For what it's worth, I'm convinced that society is an ecosystem. Part of what makes countries like the USA great is decentralized politics and economics. In stark contrast, countries like Noth Korea are humanitarian nightmares because of their authoritarian governments and command economies. Similarly, Linux is great because it is open source and community driven. Windows and OS X suck because they are locked down and locked into their respective companies' visions.
+For what it's worth, I'm convinced that society is an ecosystem. Part of what makes countries like the USA great is decentralized politics and economics. In stark contrast, countries like North Korea are humanitarian nightmares because of their authoritarian governments and command economies. Similarly, Linux is great because it is open source and community driven. Windows and OS X suck because they are locked down and locked into their respective companies' visions.
 
 If you disagree, feel free to shoot me an email (the address is in the footer). I'd love to chat. Regardless, I sincerely hope that you find this web site useful for participating in the open source software ecosystem.
