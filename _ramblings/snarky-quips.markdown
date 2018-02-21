@@ -1,7 +1,7 @@
 ---
 title: "Snarky Quips"
 desc: "Clever quotables"
-sortable: 3
+sortable: 4
 ---
 
 I have no idea where these quotes came from; if you can't find them outside of this site, then they probably originated from my subconscious.
