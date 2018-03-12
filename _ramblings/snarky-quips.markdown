@@ -21,7 +21,7 @@ The Pendulum
 >And freedom of speech comes from censorship.  
 >Political freedom rises against authoritarianism;  
 >And economic freedom, from the ineptitude of socialism.  
->Those who want power commit these atrocities,  
+>Those who desire power commit these atrocities,  
 >And so spur freedom for the next generation.  
 >But if these wrongs go undone,  
 >Then we forget our freedoms' importance,  
@@ -43,3 +43,5 @@ Names (by anonymous)
 ## Self Reference
 
 >Under the correct level of abstraction, one can find misinformation anywhere, even in this sentence.
+
+>never trust a badly writen arugment thats to genralized and relys on anectdotal evidance there all bad i never trust them and you shudent too

@@ -19,7 +19,7 @@ The scope of this server covers the following:
 There are many more services that are extremely difficult to host at home. I can recommend a few open source and/or freedom loving alternatives:
  * [BitChute](https://www.bitchute.com/) to replace YouTube.
    * Pro: It's web-torrent based and operates in your browser, which is awesome!
-   * Con: It recently went all political and rebranded itself SPKOUT, thus ensuring that it will never be general purpose like YouTube is.
+   * Con: It's definitely an alternative, with the content limitations that come with it.
  * [LBRY](/clientdocs/videos-with-lbry.html) is another approach to YouTube replacement.
     * Pro: It's fully decentralized and has a built in producer payment system using cryptocurrencies.
     * Con: It's under development (buggy!) and currently requires client software.
