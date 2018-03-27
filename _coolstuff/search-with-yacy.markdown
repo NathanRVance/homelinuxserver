@@ -4,7 +4,7 @@ desc: "A distributed, open source search portal"
 sortable: 1
 ---
 
-[YaCy](yacy.net) is fully decentralized, open source, web search powered by the users. It is a piece of software that runs on your computer which you use to perform web searches, accessing indexing information from other YaCy instances across the world. Here, I provide instructions for setting YaCy up on a Debian 9 server.
+[YaCy](http://yacy.net) is fully decentralized, open source, web search powered by the users. It is a piece of software that runs on your computer which you use to perform web searches, accessing indexing information from other YaCy instances across the world. Here, I provide instructions for setting YaCy up on a Debian 9 server.
 
 1. Install java.
    ```

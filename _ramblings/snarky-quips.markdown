@@ -10,7 +10,7 @@ Here are some ideas that I have stumbled across, rephrased to sound clever and/o
 
 >It's better to try and fail than it is to fail to try.
 
->The thing with tech companies is: until they lose you as a user, they’ll use you like a loser.
+>Tech companies will use you like a loser until they lose you as a user.
 
 >Every utopia is a dystopia for the beneficiary; but every dystopia is a utopia for the rebel.
 
@@ -21,7 +21,7 @@ The Pendulum
 >And freedom of speech comes from censorship.  
 >Political freedom rises against authoritarianism;  
 >And economic freedom, from the ineptitude of socialism.  
->Those who desire power commit these atrocities,  
+>Those yearning for power commit these atrocities,  
 >And so spur freedom for the next generation.  
 >But if these wrongs go undone,  
 >Then we forget our freedoms' importance,  
@@ -40,8 +40,18 @@ Names (by anonymous)
 >For just as wood rots away, so stone wears away;  
 >Perhaps these great names were never meant to stay.  
 
+The Ironic Child
+>I don't care if it's good, just please my taste  
+>Nor if it is right so long as it feels right.  
+>Your truth's your opinion - out of my face.  
+>Your speech is as free as my tolerance for hate.  
+>Fake news and conspiracies are quite fine  
+>When the witch hunt is after an enemy of mine.  
+>Who defines justice? Just let us agree  
+>That justice is served in favor of me.  
+
 ## Self Reference
 
->Under the correct level of abstraction, one can find misinformation anywhere, even in this sentence.
+>Under the correct level of abstraction one can find misinformation anywhere, even in this sentence.
 
->never trust a badly writen arugment thats to genralized and relys on anectdotal evidance there all bad i never trust them and you shudent too
+>never trust a badly writen arugment thats to genralized and relys on anectdotal evidance there all bad i never trust them and you shudent to
