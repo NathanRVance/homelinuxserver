@@ -9,14 +9,14 @@ This server, vance.homelinuxserver.org, runs Debian 9 and was configured entirel
 
 The scope of this server covers the following:
  * [Postfix](/serverdocs/email-with-postfix.html) to replace Gmail.
- * [Nextcloud](/serverdocs/file-sharing-with-nextcloud.html) to replace Google Drive (or Backup and Sync, whatever).
+ * [Nextcloud](/serverdocs/file-sharing-with-nextcloud.html) to replace Google Drive.
    * Pair it with [LibreOffice](https://www.libreoffice.org/) to replace Google Docs, Sheets, and Slides.
    * Install [a plugin](https://apps.nextcloud.com/apps/calendar) to replace Google Calendar.
    * [Another plugin](https://apps.nextcloud.com/apps/mail) replaces the Gmail web client.
    * And [another](https://apps.nextcloud.com/apps/spreed) does video calls.
    * You can even [stream music](https://apps.nextcloud.com/apps/music), thus replacing Spotify and Pandora.
 
-There are many more services that are extremely difficult to host at home. I can recommend a few open source and/or freedom loving alternatives:
+While the above can easily be hosted from home, there are many additional services for which it is extremely difficult. I can recommend a few open source and/or freedom loving alternatives:
  * [BitChute](https://www.bitchute.com/) to replace YouTube.
    * Pro: It's web-torrent based and operates in your browser, which is awesome!
    * Con: It's definitely an alternative, with the content limitations that come with it.
