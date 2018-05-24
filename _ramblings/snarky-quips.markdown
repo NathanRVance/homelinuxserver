@@ -1,7 +1,7 @@
 ---
 title: "Snarky Quips"
 desc: "Clever quotables"
-sortable: 4
+sortable: 5
 ---
 
 Here are some ideas that I have stumbled across, rephrased to sound clever and/or poetic.
