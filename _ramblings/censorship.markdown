@@ -8,7 +8,7 @@ In many ways, the modern internet rose from the ashes of television. It is far s
 
 Understandably, many free speech proponents advocate for turning aspects of the modern internet into public utilities. Under the restrictions of law, there is one additional hoop that must be jumped through before anyone can be censored, which is surely a win for user freedoms! Right?
 
-In my opinion, arguing for rights on the internet is akin to quibbling over cable television. The internet is dying, being suffocated under the weight of a short-list of tech giants. Stick it to them, or let them do their thing, it's irrelevant. The real focus should be in designing systems where the user is in control, and that control can't be pried out of our hands.
+In my opinion, arguing for rights on the internet is akin to quibbling over cable television. The internet is dying, being suffocated under the weight of a short-list of tech giants. Stick it to them, or let them do their thing, it's irrelevant. The real focus should be in designing systems where we users are in control, and that that control can't be pried out of our hands.
 
 The next iteration of the internet is being developed, and it will be as different from the current internet as it is different from television. It will be far more decentralized than it is now, perhaps utilizing aspects of the blockchain, webtorrents, or [IPFS](https://ipfs.io/). It will not rely on third parties to resolve domain names or host content, and it will not be censurable by ISPs. Anonymity and decentralization will be core design principles, not hacked in after the fact.
 
