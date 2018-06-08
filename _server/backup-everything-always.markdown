@@ -23,7 +23,7 @@ Let's get to work implementing this.
    # Perform the rsyncs.
    for file in ${sync[@]}; do
    	mkdir -p $backup/$(dirname $file)
-   	rsync -Aax $file $backup/$file
+   	rsync -Aax --delete $file $backup/$file
    done
  
    # Perform dumps (must be done individually).
