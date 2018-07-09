@@ -83,7 +83,7 @@ sortable: 4
    	gzip_types application/atom+xml application/javascript application/json application/ld+json application/manifest+json application/rss+xml application/vnd.geo+json application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/bmp image/svg+xml image/x-icon text/cache-manifest text/css text/plain text/vcard text/vnd.rim.location.xloc text/vtt text/x-component text/x-cross-domain-policy;
 
    	location /nextcloud {
-   		rewrite ^ /nextcloud/index.php$uri;
+   		rewrite ^ /nextcloud/index.php$request_uri;
    	}
 
    	location ~ ^/nextcloud/(?:build|tests|config|lib|3rdparty|templates|data)/ {
@@ -115,7 +115,7 @@ sortable: 4
    	# Adding the cache control header for js and css files
    	# Make sure it is BELOW the PHP block
    	location ~ \.(?:css|js|woff|svg|gif)$ {
-   		try_files $uri /nextcloud/index.php$uri$is_args$args;
+   		try_files $uri /nextcloud/index.php$request_uri;
    		add_header Cache-Control "public, max-age=15778463";
    		# Add headers to serve security related headers  (It is intended
    		# to have those duplicated to the ones above)
@@ -132,7 +132,7 @@ sortable: 4
    	}
 
    	location ~ \.(?:png|html|ttf|ico|jpg|jpeg)$ {
-   		try_files $uri /nextcloud/index.php$uri$is_args$args;
+   		try_files $uri /nextcloud/index.php$request_uri;
    		access_log off;
    	}
    }
