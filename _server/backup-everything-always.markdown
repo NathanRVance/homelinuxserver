@@ -18,7 +18,7 @@ Let's get to work implementing this.
    backup="/root/backups"
  
    # Handle rsyncs in a loop. This is a list of all folders and files we want to back up. Append additional paths to the end of the list.
-   sync=(/var/www/ /etc/nginx /var/mail/ /etc/postfix/ /etc/aliases /etc/opendkim.conf /etc/default/opendkim /lib/systemd/system/opendkim.service /etc/dkimkeys/ /etc/dovecot/ /root/backup.sh)
+   sync=(/var/www/ /etc/nginx /var/mail/ /etc/postfix/ /etc/aliases /etc/opendkim.conf /etc/default/opendkim /lib/systemd/system/opendkim.service /etc/dkimkeys/ /etc/dovecot/ /root/backup.sh /etc/gitlab/)
  	
    # Perform the rsyncs.
    for file in ${sync[@]}; do
@@ -32,6 +32,10 @@ Let's get to work implementing this.
  	
    # Back up cron.
    crontab -l > $backup/cron.bak
+
+   # Back up gitlab
+   gitlab-rake gitlab:backup:create >> /dev/null
+   cp /var/opt/gitlab/backups/`ls -t /var/opt/gitlab/backups/ | head -n 1` $backup/gitlab_backup.tar
    
    # Destination directory to sync $backup to (uncompressed)
    remote_backup="/path/to/backups"
