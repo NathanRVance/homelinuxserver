@@ -1,7 +1,7 @@
 ---
 title: "Back Up Everything. Always."
 desc: "No data is safe, ever. But, backing it all up can make it a bit less precarious"
-sortable: 6
+sortable: 7
 ---
 
 So far, we've generated a fair number of configuration files, some email, and a database of Nextcloud files. These things must be backed up now, tomorrow, and every day after that. Otherwise, you run the risk of a hard disk failure destroying everything.
