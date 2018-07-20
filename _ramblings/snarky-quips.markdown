@@ -50,6 +50,12 @@ The Ironic Child
 >Who defines justice? Just let us agree  
 >That justice is served in favor of me.  
 
+Individual and Community
+>An individual doing what's good for an individual is called love;
+>An individual doing what's good for the community is called virtue;
+>The community doing what's good for the community is called government;
+>The community doing what's good for an individual is called authoritarianism.
+
 ## Self Reference
 
 >Under the correct level of abstraction one can find misinformation anywhere, even in this sentence.
