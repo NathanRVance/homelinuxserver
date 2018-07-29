@@ -1,7 +1,7 @@
 ---
 title: "Snarky Quips"
 desc: "Clever quotables"
-sortable: 5
+sortable: 6
 ---
 
 Here are some ideas that I have stumbled across, rephrased to sound clever and/or poetic.
@@ -20,7 +20,7 @@ The Pendulum
 >Religious freedom stems from persecution,  
 >And freedom of speech comes from censorship.  
 >Political freedom rises against authoritarianism,  
->And economic freedom, from the ineptitude of socialism.  
+>And economic freedom, from the ineptitude of centralization.  
 >Those yearning for power commit these atrocities  
 >And so spur freedom for the next generation.  
 >But if these wrongs go undone,  
@@ -51,9 +51,9 @@ The Ironic Child
 >That justice is served in favor of me.  
 
 Individual and Community
->An individual doing what's good for an individual is called love;
->An individual doing what's good for the community is called virtue;
->The community doing what's good for the community is called government;
+>An individual doing what's good for an individual is called love;  
+>An individual doing what's good for the community is called virtue;  
+>The community doing what's good for the community is called government;  
 >The community doing what's good for an individual is called authoritarianism.
 
 ## Self Reference
