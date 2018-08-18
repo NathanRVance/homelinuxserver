@@ -7,7 +7,7 @@ sortable: 3
 Before we start, make sure that your internet service provider isn't blocking tcp port 25 (smtp). I found that [AT&T will unblock it for free](http://www.ka9q.net/Uverse/port25.html); I just had to call and ask. Once that is done, we can proceed.
 
 # Configure Postfix for Sending Mail
-1. If you haven't done so already, [install ssl certificates](ssl-with-letsencrypt.html). We will use the same certs for both https and for encrypting email.
+1. If you haven't done so already, [install ssl certificates](ssl-with-letsencrypt.html). We will use the same certs for both https and for signing email.
 2. Allow smtp through the firewall. If you use firewalld,
    ```
    # firewall-cmd --permanent --add-service=smtp
@@ -176,7 +176,7 @@ You can stop there if you prefer to do everything on the command line over ssh. 
    ssl = required
    ssl_cert = </etc/letsencrypt/live/vance.homelinuxserver.org/fullchain.pem
    ssl_cipher_list = ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA
-   ssl_dh_parameters_length = 2048
+   ssl_dh=</etc/nginx/dhparams.pem
    ssl_key = </etc/letsencrypt/live/vance.homelinuxserver.org/privkey.pem
    ssl_prefer_server_ciphers = yes
    userdb {
