@@ -21,10 +21,12 @@ CONF= path.expanduser('~/.utube')
 parser = argparse.ArgumentParser(description='Play vids made by your favourite creators!')
 add = parser.add_argument_group('add', 'Add a creator to be tracked by utube')
 add.add_argument('-a', '--add', metavar='NAME', help='Name of the content creator or channel as it appears in their url')
-add.add_argument('-s', '--system', choices=['youtube', 'bitchute'], help='Unterlying system to access (default = youtube)', default=['youtube'])
+add.add_argument('-s', '--system', choices=['youtube', 'bitchute'], help='Unterlying system to access (default = youtube)', default='youtube')
 parser.add_argument('-u', '--update', action='store_true', help='Update listing of videos')
 parser.add_argument('-l', '--list', action='store_true', help='List videos available')
 parser.add_argument('-w', '--watch', nargs=1, type=int, help='Watch a specific video')
+parser.add_argument('-L', '--listen', nargs=1, type=int, help='Listen to a specific video')
+parser.add_argument('-W', metavar='URL', help='Watch a specific url')
 parser.add_argument('--markAllWatched', action='store_true', help='Mark all videos as watched')
 parser.add_argument('--unwatch', nargs=1, type=int, help='Mark a specific video as unwatched')
 args = parser.parse_args()
@@ -87,18 +89,34 @@ def printFancy(vids = [], printAll = True):
             index += 1
         print()
 
+def watchUrl(url):
+    subprocess.run('youtube-dl -o - {} | mplayer -'.format(url), shell=True)
+
+def listenUrl(url):
+    subprocess.run('youtube-dl -o - {} | mplayer -vo null -'.format(url), shell=True)
+
 utubrs = readConf()
 
 if args.add:
-    utubrs[(args.add, args.system[0])] = []
+    utubrs[(args.add, args.system)] = []
     writeConf(utubrs)
 
-if args.update:
-    alldaNewStuff = []
-    for utubr in utubrs:
-        hparse = HTMLParser()
-        newstuff = []
-        for line in subprocess.run('curl -s https://www.youtube.com/user/{}/videos | grep \'<h3 class="yt-lockup-title ">\''.format(utubr[0]), shell=True, stdout=subprocess.PIPE).stdout.decode('utf-8').split('\n'):
+def group(lst, n):
+    for i in range(0, len(lst), n):
+        val = lst[i:i+n]
+        if len(val) == n:
+            yield tuple(val)
+
+def downloadBitchute(utubr, count, offset):
+    index = []
+    for pair in group(subprocess.run('youtube-dl https://www.bitchute.com/channel/{}/ -g -e --max-downloads {} --playlist-start {}'.format(utubr[0], count, offset+1), shell=True, stdout=subprocess.PIPE).stdout.decode('utf-8').split('\n'), 2):
+        index.append([pair[0], '0', False, pair[1]])
+    return index
+
+def downloadYoutube(utubr):
+    index = []
+    for userchannel in ['user', 'channel']:
+        for line in subprocess.run('curl -s https://www.youtube.com/{}/{}/videos | grep \'<h3 class="yt-lockup-title ">\''.format(userchannel, utubr[0]), shell=True, stdout=subprocess.PIPE).stdout.decode('utf-8').split('\n'):
             if line:
                 vid = hparse.unescape(re.search('(?<=rel="nofollow">).*(?=</a>)', line).group(0))
                 search = re.search('(?<=Duration: ).*(?=</span>)', line)
@@ -106,16 +124,39 @@ if args.update:
                     continue # It's a live stream
                 duration = search.group(0)
                 url = "https://www.youtube.com" + re.search('(?<=href=").*(?=" rel=)', line).group(0)
-                new = [vid, duration, False, url]
-                if not any(new[0] == vid[0] and new[1] == vid[1] for vid in utubrs[utubr]):
-                    newstuff.append(new)
-                else:
-                    break
-        alldaNewStuff += newstuff
-        utubrs[utubr] = newstuff + utubrs[utubr]
-        # Remember at most 10 items per utubr
-        if len(utubrs[utubr]) > 10:
-            utubrs[utubr] = utubrs[utubr][0:10]
+                index.append([vid, duration, False, url])
+    if len(index) > 10:
+        index = index[0:10]
+    return index
+
+def isNew(new, utubr):
+    return not any(new[0] == vid[0] and new[1] == vid[1] for vid in utubrs[utubr])
+
+def mergeVids(index, utubr):
+    merged = []
+    for new in index:
+        if isNew(new, utubr):
+            merged.append(new)
+    utubrs[utubr] = merged + utubrs[utubr]
+    # Remember at most 10 items per utubr
+    if len(utubrs[utubr]) > 10:
+        utubrs[utubr] = utubrs[utubr][0:10]
+    return merged
+
+
+if args.update:
+    alldaNewStuff = []
+    for utubr in utubrs:
+        hparse = HTMLParser()
+        newstuff = []
+        if utubr[1] == 'youtube':
+            newstuff = downloadYoutube(utubr)
+        elif utubr[1] == 'bitchute':
+            # Expensive, so test the waters first
+            newstuff = downloadBitchute(utubr, 1, 0)
+            if isNew(newstuff[0], utubr):
+                newstuff += downloadBitchute(utubr, 9, 1)
+        alldaNewStuff += mergeVids(newstuff, utubr)
     if alldaNewStuff:
         print('New stuff emerges!')
         printFancy(alldaNewStuff, False)
@@ -131,7 +172,17 @@ if args.watch:
     utubr = next(utubr for utubr in utubrs if vid in utubrs[utubr])
     vid[2] = True
     writeConf(utubrs)
-    subprocess.run('youtube-dl -o - {} | mplayer -'.format(vid[3]), shell=True)
+    watchUrl(vid[3])
+
+if args.listen:
+    vid = getVid(args.listen[0])
+    utubr = next(utubr for utubr in utubrs if vid in utubrs[utubr])
+    vid[2] = True
+    writeConf(utubrs)
+    listenUrl(vid[3])
+
+if args.W:
+    watchUrl(args.W)
 
 if args.markAllWatched:
     for utubr in utubrs:
